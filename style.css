@@ -326,7 +326,7 @@ span{
     position: absolute;
     top: 0;
     left: 0;
-    padding: 1.5rem;
+    padding: 1rem;
     visibility: hidden;
     opacity: 0;
     border-radius: .8rem .8rem 0 0;
@@ -403,7 +403,6 @@ span{
 
 /* ========== RESPONSIVE ========== */
 @media only screen and (max-width: 950px) {
-
     html{
         font-size: 90%;
     }
@@ -440,16 +439,19 @@ span{
 
 
   @media only screen and (max-width: 720px) {
-    html{
-        font-size: 85%;
-    }
-
     .form {
         width: 80vw;
     }
 
     .form button{
         width: fit-content;
+    }
+
+    .form button:hover,
+    .buttons-overlay:hover,
+    .btn-register:hover{
+        background-color: #F8D73A;
+        color: #252626;
     }
 
     .fieldset-container, 
@@ -481,11 +483,6 @@ span{
   }
 
   @media only screen and (max-width: 460px) {
-
-    html{
-        font-size: 80%;
-    }
-
     .form button{
         width: fit-content;
     }
@@ -500,13 +497,17 @@ span{
     }
 
     #modal-register > div{
-        height: 55vh;
+        height: 65vh;
     }
 
     #modal-register > div > div{
         width: 85%;
         padding-bottom: 0;
+    }
 
+    #modal-parked #total{
+        padding-top: 7rem;
+        padding-bottom: 0rem;
     }
 
     .transacoes-container{
