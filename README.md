@@ -1,7 +1,7 @@
 # Gerenciador de Estacionamento
 
 <p align="center">
-  <img alt="Gerenciador estacionamento" src="./assets/parked_img.png" width=80%>
+  <img alt="Gerenciador estacionamento" src="./assets/parked_img.png" >
 </p>
 
 
@@ -16,7 +16,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## Projeto 
 
-Sistema gerenciador de estacionamento
+Sistema gerenciador de estacionamento responsivo
 
 ## Licença
 
