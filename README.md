@@ -1,7 +1,7 @@
 # Gerenciador de Estacionamento
 
 <p align="center">
-  <img alt="Gerenciador estacionamento" src="./public/assets/todo_List_img.png">
+  <img alt="Gerenciador estacionamento" src="./assets/parked_img.png" width=80%>
 </p>
 
 
