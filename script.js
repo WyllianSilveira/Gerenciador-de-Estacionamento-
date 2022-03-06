@@ -74,7 +74,7 @@ const Register = {
     cashWithdrawal(){
         const retirada = (Register.retiradaValue.value)
         if(Register.valorTotal >= retirada && retirada > 0){
-            Math.floor((Register.valorTotal -= retirada) *1000) / 1000
+            Register.valorTotal = Math.floor((Register.valorTotal -= retirada) *1000) / 1000
             Storage.setValorTotal(Register.valorTotal)
             Register.retiradaValue.value = ""
             Register.msgTransacao.innerHTML = `RETIRADA EFETUADA COM SUCESSO!`
@@ -92,7 +92,7 @@ const Register = {
     cashDeposit(){
         const deposito = Number(Register.depositoValue.value)
         if(deposito > 0){
-            Math.floor((Register.valorTotal += deposito) * 1000 ) / 1000
+            Register.valorTotal = Math.floor((Register.valorTotal += deposito) * 1000 ) / 1000
             Storage.setValorTotal(Register.valorTotal)
             Register.depositoValue.value = ""
             Register.msgTransacao.innerHTML = "DEPOSITO EFETUADO COM SUCESSO!"
