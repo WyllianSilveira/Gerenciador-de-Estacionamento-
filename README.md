@@ -3,7 +3,8 @@
 <p align="center">
   <img alt="Gerenciador estacionamento" src="./assets/parked_img.png" >
 </p>
-
+<p align="center">
+  <img alt="Gerenciador estacionamento" src="./assets/register_img.png" >
 
 ## Tecnologias
 
