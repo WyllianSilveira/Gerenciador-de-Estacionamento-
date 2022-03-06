@@ -1,0 +1,525 @@
+/* ========== RESET ========== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+
+body{
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(180deg, rgba(37,38,38,.4), rgba(37,38,38,.7));
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* ========== LINKS AND BUTTONS ========== */
+a{
+    text-decoration: none;
+
+}
+
+.form button{
+    font-weight: bold;
+    width: 7rem;
+    padding: .4rem;
+    background-color: #F8D73A;
+    color:#252626;
+    border-radius: .3rem;
+}
+
+
+.form button:hover{
+    background-color: #252626;
+    color: #F8D73A;
+    transition: .3s;
+}
+
+.voltar{
+    position:fixed;
+    left: 2rem;
+    top: 2rem;
+    background-color: #F8D73A;
+    padding: .8rem;
+    border-radius: .8rem;
+    opacity: .8;
+}
+
+
+.voltar:hover{
+    opacity: 1;
+}
+
+.buttons-overlay{
+    font-weight: bold;
+    background-color: #F8D73A;
+    padding: .4rem;
+    color:#252626 ;
+    width: 6rem;
+    margin-left: 1rem;
+    border-radius: .3rem;
+}
+
+.buttons-overlay:hover{
+    background-color: #252626;
+    color: #F8D73A;
+    transition: .3s;
+}
+
+.btn-register{
+    padding: .4rem;
+    border-radius: .2rem;
+    border: none;
+    background-color: #F8D73A;
+    color: #252626;
+    font-weight: bold;
+}
+
+.btn-register:hover{
+    background-color: #252626;
+    color: #F8D73A;
+    transition: .3s;
+}
+
+
+/* ========== HEADER ========== */
+header{
+    height: 100px;
+    line-height: 100px;
+    color: #252626;
+    text-align: center; 
+}
+
+
+
+header img{
+    top: 12px;
+    position: relative;
+    width: 3rem;
+}
+
+header span{
+    color: #252626;
+    margin-left: -.3rem;
+}
+
+/* ========== MAIN ========== */
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+
+section#entrada-saida{
+    display: flex;
+    width: 90vw;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+/* ========== FORM ========== */
+input{
+    text-transform: uppercase;
+}
+
+.form{
+    width: 525px;  
+}
+
+.form fieldset:first-child{
+    color: #252626;
+    background-color: rgba(37,38,38, .0);
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+    padding: 2rem;
+    border-radius: .8rem;    
+}
+
+.form#saida fieldset{
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0;
+}
+
+.form fieldset:first-child 
+fieldset:nth-child(3){
+    display: flex;
+    gap: .5rem;
+}
+
+
+legend{
+    color: #252626;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.form fieldset > fieldset{ 
+    border: none;  
+}
+
+
+#lapel-placa{
+    position: absolute;
+    left: 0px;
+}
+
+
+.fieldset-container{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+form#entrada input#placa, 
+input#placa-out, 
+input#modelo,
+select{
+    width:70%;
+    padding: .4rem;
+    border: none;
+    outline: none;
+    border-radius: .2rem;
+}
+
+.form#saida fieldset > fieldset{
+    width: 50%;
+}
+
+input#placa-out{
+    width: 70%;
+}
+
+/* ========== DISPLAY ========== */
+section#display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+
+#info{
+    width:auto;
+    height: auto;
+    background-color: #F6FCFF;
+    color: #252626;
+    border-radius: .8rem;
+    padding: 1rem;
+    border: 2px groove rgb(192,192,192);
+}
+
+#info p{
+    margin: .1rem 0;
+}
+
+span{
+    color: #F6FCFF;
+}
+
+
+/* ========== MODAL ========== */
+.modal-overlay{
+    width: 100%;
+    height: auto;
+    background-color: rgba(0,0,0,0.9);
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: initial !important
+}
+
+.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal{
+    height: 100vh;
+    overflow-y: auto;
+}
+
+
+/* ========== MODAL REGISTER ========== */
+#modal-register{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal-register > div{
+    font-weight: 500;
+    background-color:#5D6974 ;
+    width: 65vw;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+    position: relative;
+    border-radius: .8rem;
+}
+
+#modal-register > div > div{
+    width: 60%;
+    height: 50vh;
+    background-color: #F6FCFF;
+    color: #252626;
+    display: grid;
+    grid-template: 1fr 4fr / 1fr ;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+#inputs-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+#modal-register h2 {
+    width: 100%;
+    font-size: 2.5rem;
+    font-weight: 500;
+    background-color: #F8D73A;
+    color: #252626;
+    text-align: center;
+    align-self: start;
+    padding: .8rem 0;
+}
+
+#modal-register h3{
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+#modal-register div h4{
+    background-color: #e92929;
+    width: 100%;
+    text-align: center;
+    color: #F6FCFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1.5rem;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: .8rem .8rem 0 0;
+}
+
+#modal-register h4.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+#modal-register input{
+    width:45%;
+    padding: .4rem;
+    border: none;
+    outline: none;
+    border-radius: .2rem;
+    background-color: lightgrey;
+}
+
+.transacoes-container{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+
+/* ========== MODAL PARKED ========== */
+#modal-parked{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3rem;
+}
+
+#modal-parked #total{
+    color: #fff;
+    padding: 2.5rem;
+}
+
+#total{
+    color: #F6FCFF;
+    font-weight: 500;
+}
+
+#table {
+    width: 80vw;
+    border-spacing: .2rem .2rem;
+    overflow:visible;
+    background-color: #5D6974;
+    padding: 2rem 2rem;
+    border-radius: .8rem;
+   
+}
+
+#table thead th{
+    background: #fff;
+    font-weight: normal;
+    padding: 1rem 2rem;
+    background-color: #F8D73A;
+    color: #000;
+    font-weight: bold;
+}
+
+
+#table tbody tr td{
+    background-color: #F6FCFF;
+    color: #000;
+    padding: .3rem 0;
+    text-align: center;
+}
+
+
+/* ========== RESPONSIVE ========== */
+@media only screen and (max-width: 950px) {
+
+    html{
+        font-size: 90%;
+    }
+
+    header img{
+        top: 10px;
+    }
+
+    #entrada-saida{
+        flex-direction: column;
+        gap: 2;
+    }
+
+    #table{
+        margin-top: 2rem;
+        width: 90vw;
+        display: block;
+        overflow-x: auto;
+    }
+
+    #table::-webkit-scrollbar {
+        display: none;
+    }
+
+    .form fieldset:first-child{
+        height: auto;
+    }
+
+    #modal-register > div{
+        width: 85vw;
+        height: 70vh;
+    }
+  }
+
+
+  @media only screen and (max-width: 720px) {
+    html{
+        font-size: 85%;
+    }
+
+    .form {
+        width: 80vw;
+    }
+
+    .form button{
+        width: fit-content;
+    }
+
+    .fieldset-container, 
+    .form#saida fieldset > fieldset{
+        width: 60%;
+    }
+
+    .form fieldset:first-child
+    fieldset:nth-child(3){
+       display: flex;
+       flex-direction: column;
+       gap: 1rem;
+       /* background-color: #e92929; */
+   }
+
+    #modal-register > div > div{
+        width: 70%;
+        padding-bottom: 0;
+    }
+
+    .transacoes-container{
+        width: 80%;
+        /* background-color: #e92929; */
+    }
+
+    #modal-register input{
+        width: 50%;
+    }
+  }
+
+  @media only screen and (max-width: 460px) {
+
+    html{
+        font-size: 80%;
+    }
+
+    .form button{
+        width: fit-content;
+    }
+
+    .form, #info{
+        width: 90vw;
+    }
+
+    .fieldset-container, 
+    .form#saida fieldset > fieldset{
+        width: 70%;
+    }
+
+    #modal-register > div{
+        height: 55vh;
+    }
+
+    #modal-register > div > div{
+        width: 85%;
+        padding-bottom: 0;
+
+    }
+
+    .transacoes-container{
+        width: 95%;
+    }
+
+    #modal-register input{
+        width: 50%;
+    }
+  }
+
+
+ 
+
+
+

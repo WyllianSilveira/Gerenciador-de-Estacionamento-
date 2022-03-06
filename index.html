@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/e1846ae19d.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/parking.png">
+
+    <title>WSC-PARK</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <h1>WSC-<img src="./assets/parking-sign.png" alt="logo_brand"><span>ARK</span></h1> 
+    </header>
+    <!-- /HEADER -->
+
+    <!-- MAIN -->
+    <main>
+        <!-- SECTION ENTRADA-SAIDA -->
+        <section id="entrada-saida">
+            <!-- FORM ENTRADA-->
+            <form action="" class="form" id="entrada" onsubmit="Form.submit(event)">
+                <fieldset>
+                    <legend>ENTRADA</legend>
+                    <fieldset class="fieldset-container">
+                        <p id="message"></p>
+                        <label id="lapel-placa" for="placa">Placa:</label>
+                        <input type="text" name="placa" id="placa" maxlength="8"
+                            pattern="[a-zA-Z]{3}[-]?[0-9]{4}|[a-zA-Z]{3}[-]?[0-9]{1}[a-zA-Z]{1}[0-9]{2}"
+                            title="A Placa digitada não corresponde ao padrão mercosul ou ao antigo">
+                    </fieldset>
+
+                    <fieldset>
+                        <div>
+                            <input type="radio" name="categoria" id="carro" value="carro">
+                            <label for="carro">Carro</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="categoria" id="moto" value="motocicleta">
+                            <label for="moto">Motocicleta</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="categoria" id="pickup" value="pickup">
+                            <label for="pickup">Pickup</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="categoria" id="van" value="van">
+                            <label for="van">Van</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="categoria" id="caminhao" value="caminhao">
+                            <label for="caminhão">Caminhão</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="fieldset-container">
+                        <label for="marca">Marca:</label>
+                        <select name="marca" id="marca" placeholder="MARCA">
+                            <option value="" selectd></option>
+                            <option value="alfa romeo">ALFA ROMEO</option>
+                            <option value="audi">AUDI</option>
+                            <option value="bmw">BMW</option>
+                            <option value="caoa chery">CAOA CHERY</option>
+                            <option value="chevrolet">CHEVROLET</option>
+                            <option value="citroen">CITROEN</option>
+                            <option value="fiat">FIAT</option>
+                            <option value="ford">FORD</option>
+                            <option value="harley-davidson">HARLEY-DAVIDSON</option>
+                            <option value="honda">HONDA</option>
+                            <option value="HYUNDAI">HYUNDAI</option>
+                            <option value="JEEP">JEEP</option>
+                            <option value="KIA">KIA</option>
+                            <option value="LAND ROVER">LAND ROVER</option>
+                            <option value="MERCEDES">MERCEDES</option>
+                            <option value="MINI">MINI</option>
+                            <option value="MITSUBISHI">MITSUBISHI</option>
+                            <option value="NISSAN">NISSAN</option>
+                            <option value="PEUGEOT">PEUGEOT</option>
+                            <option value="RENAULT">RENAULT</option>
+                            <option value="SEAT">SEAT</option>
+                            <option value="SEAT">SUZUKI</option>
+                            <option value="TESLA">TESLA</option>
+                            <option value="TOYOTA">TOYOTA</option>
+                            <option value="VOLKSWAGEN">VOLKSWAGEN</option>
+                            <option value="VOLVO">VOLVO</option>
+                            <option value="YAMAHA">YAMAHA</option>
+                            <option style="background-color: lightgrey;" value="OUTRO">OUTRO</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="fieldset-container">
+                        <label for="modelo">Modelo:</label>
+                        <input type="text" id="modelo" name="modelo">
+                    </fieldset>
+
+                    <button type="submit">CONFIRMAR</button>
+
+                </fieldset>
+            </form>
+            <!-- /FORM ENTRADA -->
+
+
+            <!-- FORM SAIDA -->
+            <form action="" class="form" id="saida" onsubmit="FormSaida.submit(event)">
+                <fieldset>
+                    <legend>SAÍDA</legend>
+                    <fieldset>
+                        <label for="placa-out">Placa:</label>
+                        <input type="text" id="placa-out" name="placaout" maxlength="8" >
+                    </fieldset>
+                    <button type="submit">CONFIRMAR</button>
+
+                </fieldset>
+            </form>
+            <!-- /FORM SAIDA -->
+        </section>
+        <!-- /SECTION ENTRADA-SAIDA -->
+
+
+        <!-- SECTION DISPLAY-->
+        <section id="display">
+            <div id="info">
+                <h1></h1>
+            </div>
+        </section>
+        <!-- /SECTION DISPLAY-->
+
+        <!-- SECTION BUTTONS -->
+        <section>
+            <button class="buttons-overlay" onclick="Modal.openParked()">PATIO</button>
+            <button class="buttons-overlay" onclick="Modal.openRegister()">CAIXA</button>
+        </section>
+        <!-- /SECTION BUTTONS -->
+    </main>
+    <!-- /MAIN -->
+
+
+    <!-- MODAL-OVERLAY-PARKED -->
+    <div class="modal-overlay" id="modal-overlay-parked">
+        <div class="modal" id="modal-parked">
+            <img src="./assets/arrow.svg" alt="voltar" class="voltar" onclick="Modal.closeParked()">
+            <h2 id="total"></h2>
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th>PLACA</th>
+                        <th>DATA</th>
+                        <th>HORA</th>
+                        <th>CATEGORIA</th>
+                        <th>MARCA</th>
+                        <th>MODELO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- /MODAL-OVERLAY-PARKED -->
+
+    <!-- MODAL-OVERLAY-REGISTER -->
+    <div class="modal-overlay" id="modal-overlay-register">
+        <div class="modal" id="modal-register">
+            <img src="./assets/arrow.svg" alt="voltar" class="voltar" onclick="Modal.closeRegister()">
+            <div>
+                <div>
+                    <h2>CAIXA</h2>
+                    <div id="inputs-container">
+                        <h3 id="valor"></h3>
+                    
+                        <div class="transacoes-container">
+                            <label for="retirada">RETIRADA:</label>
+                            <input type="number" id="retirada" name="btn-register" placeholder="0,00" step="0.01">
+                            <button onclick="Register.cashWithdrawal()" class="btn-register">OK</button>
+                        </div>
+                        <div class="transacoes-container">
+                            <label for="deposito">DEPOSITO:</label>
+                            <input type="number" id="deposito" name="deposito" placeholder="0,00" step="0.01">
+                            <button onclick="Register.cashDeposit()" class="btn-register">OK</button>
+                        </div>
+                    </div>
+                    <h4 id="transacao"></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /MODAL-OVERLAY-REGISTER -->
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
