@@ -1,6 +1,9 @@
 # Gerenciador de Estacionamento
 
 <p align="center">
+  <img alt="Gerenciador estacionamento" src="./assets/wsc-park_img.png" >
+</p>
+<p align="center">
   <img alt="Gerenciador estacionamento" src="./assets/parked_img.png" >
 </p>
 <p align="center">
