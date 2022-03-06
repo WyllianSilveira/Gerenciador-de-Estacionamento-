@@ -1,7 +1,7 @@
 # Gerenciador de Estacionamento
 
 <p align="center">
-  <img alt="Todo-List" src="./public/assets/todo_List_img.png">
+  <img alt="Gerenciador estacionamento" src="./public/assets/todo_List_img.png">
 </p>
 
 
@@ -16,8 +16,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## Projeto 
 
-Todo-List Responsivo desenvolvido com bibioteca React, essa aplicação permite adicionar excluir e marcar como feita quaisquer atividades do usuário
+Sistema gerenciador de estacionamento
 
 ## Licença
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/WyllianSilveira/Todo-List-React/blob/main/LICENSE) para mais detalhes.
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/WyllianSilveira/Gerenciador-de-Estacionamento-/blob/main/LICENSE) para mais detalhes.
