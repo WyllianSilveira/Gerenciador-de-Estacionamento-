@@ -96,8 +96,6 @@ header{
     text-align: center; 
 }
 
-
-
 header img{
     top: 12px;
     position: relative;
@@ -497,7 +495,7 @@ span{
     }
 
     #modal-register > div{
-        height: 65vh;
+        height: 70vh;
     }
 
     #modal-register > div > div{
