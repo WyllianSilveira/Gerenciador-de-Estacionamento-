@@ -1,14 +1,9 @@
 # Gerenciador de Estacionamento
-
-<p align="center">
-  <img alt="Gerenciador estacionamento" src="./assets/wsc-park_img.png" width=80%>
+<br>
+<div>
+  <img alt="Gerenciador estacionamento" src="./assets/Animação.gif">
 </p>
-<p align="center">
-  <img alt="Gerenciador estacionamento" src="./assets/parked_img.png" width=80%>
-</p>
-<p align="center">
-  <img alt="Gerenciador estacionamento" src="./assets/register_img.png" width=80%>
- </p>
+<br>
 
 ## Tecnologias
 
@@ -19,9 +14,10 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 <img src="https://img.icons8.com/color/48/000000/html-5--v1.png" width="40"/>
 <img src="https://img.icons8.com/color/48/000000/css3.png"  width="40"/>
 
-## Projeto 
-
-Sistema gerenciador de estacionamento responsivo
+## Sobre o projeto 
+  
+Sistema gerenciador de estacionamento com as funcionalidades de entrada de veículo capturando placa, categoria, marca e modelo, saída mostrando os dados do veículo
+a data e hora e valor a ser pago, uma tela para controle do patio e outra do caixa
 
 ## Licença
 
