@@ -17,7 +17,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## Sobre o projeto 
   
 Sistema gerenciador de estacionamento com as funcionalidades de entrada de veículos capturando placa, categoria, marca e modelo, saída de veículos mostrando os dados do veículo
-a data e hora e valor a ser pago, uma tela para controle do patio e outra do caixa.
+a data e hora de entrada e saída e o valor a ser pago, uma tela para controle do patio e outra do caixa.
 
 ## Licença
 
