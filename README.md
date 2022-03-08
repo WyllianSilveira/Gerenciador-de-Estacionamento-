@@ -1,7 +1,7 @@
 # Gerenciador de Estacionamento
 <br>
 <div>
-  <img alt="Gerenciador estacionamento" src="./assets/Animação.gif">
+  <img alt="Gerenciador estacionamento" src="./assets/Parking_manager.gif">
 </p>
 <br>
 
